@@ -13,7 +13,7 @@ a {
 	text-decoration: none;
 }
 .container {
-	min-height: 100vh;
+	min-height: 80vh;
 	width: 100%;
 	display: flex;
 	align-items: center;
@@ -212,6 +212,7 @@ p {
 
 #hero .left {
   width: 35%;
+	background-image: linear-gradient(60deg, black 0%, #747538 100%);
 }
 
 #hero .right {
@@ -277,6 +278,10 @@ p {
 
 /* Dentalmechanic section */
 
+#dentalmechanic{
+	height: 80%;
+	
+}
 
 #dentalmechanic .project-item {
 	display: flex;
@@ -284,11 +289,11 @@ p {
 	justify-content: center;
 	flex-direction: row;
 	width: 60%;
-	height: 80%;
 	margin: 20px auto;
 	overflow: hidden;
-	border-radius: 10px;
-	box-shadow: 0px 0px 18px 0 #0000002c;
+	border: 2px solid #999a56;
+	
+	
 
 }
 #dentalmechanic .project-info {
@@ -299,6 +304,7 @@ p {
 	align-items: flex-start;
 	justify-content: center;
 	flex-direction: column;
+	
 	
 }
 #dentalmechanic .project-info h1 {
@@ -316,6 +322,7 @@ p {
 	height:27vw;
 	overflow: hidden;
 	position: relative;
+	
 }
 #dentalmechanic .project-img:after {
 	
@@ -325,7 +332,7 @@ p {
 	top: 0;
 	height: 27vw;
 	width: 100%;
-	background-image: linear-gradient(60deg, black 0%, #747538 100%);;
+	background-image: linear-gradient(60deg, black 0%, #747538 100%);
 	opacity: 0.7;
 	z-index: 2;
 }
@@ -342,15 +349,15 @@ p {
 
 #covid19 .project-item {
 	display: flex;
+	color:white;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
 	width: 60%;
 	margin: 20px auto;
 	overflow: hidden;
-	border-radius: 10px;
-	box-shadow: 0px 0px 18px 0 #0000002c;
-
+	border: 2px solid #999a56;
+	background-image: linear-gradient(60deg, black 0%, #747538 100%);
 }
 #covid19 .project-info {
 	padding: 30px;
@@ -360,6 +367,7 @@ p {
 	align-items: flex-start;
 	justify-content: center;
 	flex-direction: column;
+
 	
 }
 #covid19 .project-info h1 {
@@ -466,19 +474,16 @@ p {
 #contact .contact-item {
 	width: 80%;
 	text-align: center;
-	border-radius: 10px;
 	padding: 30px;
 	margin: 30px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	box-shadow: 0px 0px 18px 0 #0000002c;
-	transition: 0.3s ease box-shadow;
+	
+	
 }
-#contact .contact-item:hover {
-	box-shadow: 0px 0px 5px 0 #0000002c;
-}
+
 #contact .icon {
 	width: 70px;
 	margin: 0 auto;
@@ -497,8 +502,7 @@ p {
 
 .mapouter {
 	margin: 40px;
-		box-shadow: 0px 0px 18px 0 #0000002c;
-		border-radius: 10px;
+
 
 
 }
