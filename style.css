@@ -17,8 +17,7 @@ a {
     width: 100%;
     display: flex;
     align-items: center;
-	margin: 0 auto;
-	align-content: center;
+    align-content: center;
 }
 img {
     height: 100%;
@@ -78,20 +77,22 @@ p {
     top: 0;
     width: 100vw;
     height: auto;
+			
+
 }
 #header .header {
     min-height: 8vh;
-    background-color: rgba(31, 30, 30, 0.24);
     transition: 0.3s ease background-color;
 }
 #header .nav-bar {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     width: 100%;
     height: 100%;
     max-width: 1300px;
     padding: 0 10px;
+	padding: 10px 20px;
+	
 }
 #header .nav-list ul {
     list-style: none;
@@ -119,8 +120,9 @@ p {
     text-decoration: none;
     color: white;
     text-transform: uppercase;
-    padding: 20px;
+    padding: 5px 20px;
     display: block;
+
 }
 #header .nav-list ul a::after {
     content: attr(data-after);
@@ -128,11 +130,12 @@ p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
-    color: rgba(153, 154, 86, 0.021);
+    color: rgba(35, 69, 138, 0.021);
     font-size: 13rem;
     letter-spacing: 50px;
     z-index: -1;
     transition: 0.3s ease letter-spacing;
+	
 }
 #header .nav-list ul li:hover a::after {
     transform: translate(-50%, -50%) scale(1);
@@ -197,8 +200,7 @@ p {
 /* End Header section */
 /* Hero Section */
 .hero {
-       background-image: linear-gradient(-60deg, black 0%, #23458a 100%);
-
+    background-image: linear-gradient(-60deg, black 0%, #23458a 100%);
 }
 .hero-video {
     position: absolute;
@@ -237,14 +239,17 @@ p {
 /* End Hero Section */
 /* About Section */
 .quote {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     padding: 50px 20px;
-	text-align: center;
-	font-size: 2rem;
+    text-align: center;
+    font-size: 2rem;
     align-items: center;
-	align-content: center;
+    align-content: center;
     background-image: linear-gradient(-60deg, black 0%, #23458a 100%);
-	color: white;
-
+    color: white;
+}
+#about {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 #about .about {
     flex-direction: column-reverse;
@@ -279,8 +284,7 @@ p {
     font-size: 2rem;
 }
 #about .col-left .about-img {
-    
-	height: 110%;
+    height: 110%;
     width: 100%;
     position: relative;
     border: 10px solid white;
@@ -296,122 +300,193 @@ p {
     z-index: -1;
 }
 /* End About Section */
-/* Services Section */
-#services .section-title{
-	padding-bottom: 50px;
-	margin-top: -100px;
+#references {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    color: white;
+    background-image: linear-gradient(-60deg, black 0%, #23458a 100%);
+    overflow: hidden;
 }
-#services .services {
-    flex-direction: column;
+#references .section-title {
+    color: white;
+    padding-top: 70px;
+    margin: -5vh;
+}
+.slideshow-container {
+    min-height: 180px;
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+/* Make the images invisible by default */
+.Containers {
+    width: 80%;
+    margin: 10%;
     text-align: center;
+}
+.Containers h2 {
+    font-style: italic;
+    padding: 1vw;
+    float: right;
+    font-size: 3rem;
+    color: #23458a;
+}
+/* The circles or bullets and indicators */
+.dots {
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    margin: 0 5px;
+    background-color:#23458a ;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 20px;
+    transition: background-color 1s ease;
+}
+
+.MessageInfo {
+  color: black;
+  font-size: 14px;
+  padding: 10px 14px;
+  position: relative;
+  top: 0;
+}
+
+
+
+/* forward & Back buttons */
+.Back, .forward {
+  cursor: pointer;
+  position: absolute;
+  top: 48%;
+  width: auto;
+  margin-top: -23px;
+  padding: 17px;
+  color: grey;
+  font-weight: bold;
+  font-size: 19px;
+  transition: 0.4s ease;
+  border-radius: 0 5px 5px 0;
+  user-select: none;
+}
+
+/* Place the "forward button" to the right */
+.forward {
+  right: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+
+.enable, .dots:hover {
+    background-color: #23458a;
+}
+/* Faint animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2.4s;
+    animation-name: fade;
+    animation-duration: 2.4s;
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: .5
+    }
+    to {
+        opacity: 2
+    }
+}
+@keyframes fade {
+    from {
+        opacity: .5
+    }
+    to {
+        opacity: 2
+    }
+}
+/* Dentalmechanic section */
+/* End Projects section */
+/* covid section */
+.projects {
+    flex-direction: column;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 100px 0;
 }
-
-.service-image{
-	height: 70vh;
+#covid19 {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
-/* End Services Section */
-
-
-#references{
-	color: white;
-	background-image: linear-gradient(-60deg, black 0%, #23458a 100%);
-	margin-bottom: 15vw;
-	overflow: hidden;
+#penztarak {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
-#references .section-title{
-	color: white;
-	padding-top: 70px;
-	margin: -5vh;
+.projects-header h1 {
+    margin-bottom: 50px;
 }
-
-.slideshow-container {
-	min-height: 180px;
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-/* Make the images invisible by default */
-.Containers{
-	width: 80%;
-	margin: 10%;	
-	text-align: center;
-}
-.Containers h2{
-	font-style: italic;
- 	 padding: 1vw;
-	float:right;
-	font-size: 3rem;
-    color: #23458a;
-}
-
-
-
-
-
-
-/* The circles or bullets and indicators */
-.dots {
-  cursor: pointer;
-  height: 16px;
-  width: 16px;
-  margin: 0 5px;
-  background-color: grey;
-  border-radius: 50%;
-  display: inline-block;
-	margin-bottom: 20px;
-  transition: background-color 1s ease;
-}
-
-.enable, .dots:hover {
-  background-color: #23458a;
-}
-
-/* Faint animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 2.4s;
-  animation-name: fade;
-  animation-duration: 2.4s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .5}
-  to {opacity: 2}
-}
-
-@keyframes fade {
-  from {opacity: .5}
-  to {opacity: 2}
-}
-
-
-
-/* Dentalmechanic section */
-#dentalmechanic {
-    height: 80%;
+.all-projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 .project-item {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
-    width: 60%;
+    flex-direction: column;
+    width: 80%;
     margin: 20px auto;
     overflow: hidden;
-    border: 2px solid #23458a;
+    border-radius: 10px;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
 }
 .project-info {
     padding: 30px;
     flex-basis: 50%;
-    height: 50%;
+    height: 100%;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
+    background-image: linear-gradient(-60deg, black 0%, #23458a 100%);
+    color: white;
 }
+#penztarak .project-info {
+    background-image: linear-gradient(60deg, black 0%, #23458a 100%);
+}
+#szolgaltatas .project-item {
+    box-shadow: black 6px 2px 16px 0px, #23458a -6px -2px 16px 0px;
+}
+#szolgaltatas .project-info {
+    background-image: linear-gradient(120deg, #23458a 0%, black 100%);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+#szolgaltatas .section-title {
+    color: white;
+}
+#szolgaltatas {
+    background-image: linear-gradient(-60deg, black 0%, #23458a 100%);
+}
+#szolgaltatas .project-info h2 {
+    font-size: 2.2rem;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+
+#tanacs .project-item {
+    box-shadow: #23458a 6px 2px 16px 0px, black -6px -2px 16px 0px;
+}
+#tanacs .project-info {
+    background-image: linear-gradient(-90deg, #23458a 0%, black 100%);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+#tanacs .section-title {
+    color: white;
+}
+#tanacs {
+    background-image: linear-gradient(60deg, black 0%, #23458a 100%);
+}
+
+
+
 .project-info h1 {
     font-size: 4rem;
     font-weight: 500;
@@ -421,9 +496,16 @@ p {
     font-weight: 500;
     margin-top: 10px;
 }
+.project-info p {
+    color: white;
+}
+.project-info p span {
+    font-size: 1.6rem;
+    font-weight: 800;
+}
 .project-img {
-    width: 100%;
-    height: 27vw;
+    flex-basis: 50%;
+    height: 300px;
     overflow: hidden;
     position: relative;
 }
@@ -432,74 +514,15 @@ p {
     position: absolute;
     left: 0;
     top: 0;
-    height: 27vw;
+    height: 100%;
     width: 100%;
+    background-image: linear-gradient(-60deg, black 0%, #23458a 100%);
     opacity: 0.7;
-    z-index: 2;
 }
 .project-img img {
     transition: 0.3s ease transform;
 }
- .project-item:hover .project-img img {
-    transform: scale(1.1);
-}
-/* End Projects section */
-/* covid section */
- .project-item {
-    display: flex;
-    color: black;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 60%;
-    margin: 20px auto;
-    overflow: hidden;
-    border: 6px solid white;
-}
-#covid19{
-	    background-image: linear-gradient(-60deg, black 0%, #23458a 100%);
-
-}
-
-#covid19 .project-info {
-    padding: 30px;
-    flex-basis: 50%;
-    height: 50%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-	background-color: white;
-}
-#covid19 .project-info h1 {
-    font-size: 4rem;
-    font-weight: 500;
-}
-#covid19 .project-info h2 {
-    font-size: 1.8rem;
-    font-weight: 500;
-    margin-top: 10px;
-}
-#covid19 .project-img {
-    width: 100%;
-    height: 27vw;
-    overflow: hidden;
-    position: relative;
-}
-#covid19 .project-img:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 27vw;
-    width: 100%;
-    opacity: 0.7;
-    z-index: 2;
-}
-#covid19 .project-img img {
-    transition: 0.3s ease transform;
-}
-#covid19 .project-item:hover .project-img img {
+.project-item:hover .project-img img {
     transform: scale(1.1);
 }
 /* End covid section */
@@ -540,7 +563,15 @@ p {
     font-weight: 500;
 }
 .mapouter {
+    align-items:center;
+    background-image: linear-gradient(-60deg, black 0%, #23458a 100%);
+    max-height: 80%;
+    object-fit:contain;
+	
+    
     margin: 40px;
+	
+
 }
 /*End contact Section */
 /* Footer */
@@ -607,100 +638,193 @@ p {
     #hero h1 {
         font-size: 3rem;
     }
+    /* szolgaltatas */
+    #szolgaltatas .project-item {
+        flex-direction: row;
+    }
+    #szolgaltatas .project-item:nth-child(odd) {
+        flex-direction: row-reverse;
+    }
+    #szolgaltatas .project-item {
+        height: 400px;
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+    #szolgaltatas .all-projects .project-info {
+        height: 100%;
+    }
+    #szolgaltatas .all-projects .project-img {
+        height: 100%;
+    }
+    /* covid19 */
+    #covid19 .project-item {
+        flex-direction: row;
+    }
+    #covid19 .project-item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    #covid19 .project-item {
+        height: 400px;
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+    #covid19 .all-projects .project-info {
+        height: 100%;
+    }
+    #covid19 .all-projects .project-img {
+        height: 100%;
+    }
+    /* End covid19 */
+    /* penztarak */
+    #penztarak .project-item {
+        flex-direction: row;
+    }
+    #penztarak .project-item:nth-child(odd) {
+        flex-direction: row-reverse;
+    }
+    #penztarak .project-item {
+        height: 400px;
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+    #penztarak .all-projects .project-info {
+        height: 100%;
+    }
+    #penztarak .all-projects .project-img {
+        height: 100%;
+    }
+    /* tanacs */
+    #tanacs .project-item {
+        flex-direction: row;
+    }
+    #tanacs .project-item:nth-child(odd) {
+        flex-direction: row-reverse;
+    }
+    #tanacs .project-item {
+        height: 400px;
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+    #tanacs .all-projects .project-info {
+        height: 100%;
+    }
+    #tanacs .all-projects .project-img {
+        height: 100%;
+    }
+    /* End penztarak */
+    /* End penztarak */
+    /* fogtechnika */
+    #fogtechnika .project-item {
+        flex-direction: row;
+    }
+    #fogtechnika .project-item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    #fogtechnika .project-item {
+        height: 400px;
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+    #fogtechnika .all-projects .project-info {
+        height: 100%;
+    }
+    #fogtechnika .all-projects .project-img {
+        height: 100%;
+    }
+    /* End penztarak */
     /* End Hero */
-    /* Services Section */
-}
-/* End Services Section */
+    /* About */
+    #about .about {
+        flex-direction: row;
+    }
+    #about .col-left {
+        width: 600px;
+        height: 400px;
+        padding-left: 60px;
+    }
+    #about .about .col-left .about-img::after {
+        left: -45px;
+        top: 34px;
+        height: 98%;
+        width: 98%;
+        border: 10px solid #23458a;
+    }
+    #about .col-right {
+        text-align: left;
+        padding: 30px;
+    }
+    #about .col-right h1 {
+        text-align: left;
+    }
+    /* End About */
+    /* contact  */
+    #contact .contact {
+        flex-direction: column;
+        padding: 100px 0;
+        align-items: center;
+        justify-content: center;
+        min-width: 20vh;
+    }
+    #contact .contact-items {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 0;
+    }
+    #contact .contact-item {
+        width: 30%;
+        margin: 0;
+        flex-direction: row;
+    }
+    #contact .contact-item .icon {
+        height: 100px;
+        width: 100px;
+    }
+    #contact .contact-item .icon img {
+        object-fit: contain;
+    }
+    #contact .contact-item .contact-info {
+        width: 100%;
+        text-align: left;
+        padding-left: 20px;
+    }
+    #contact .openhours {
+        padding: 20px;
+        text-align: center;
+        font-size: 1.5em;
+    }
+    /* End contact  */
+    /* End Media Query For Tablet */
+    /* Media Query For Desktop */
+    @media only screen and (min-width: 1200px) {
+        /* header */
+        #header .hamburger {
+            display: none;
+        }
+        #header .nav-list ul {
+            position: initial;
+            display: block;
+            height: auto;
+            width: 100%;
+            background-color: transparent;
+        }
+        #header .nav-list ul li {
+            display: inline-block;
 
-/* About */
-#about .about {
-    flex-direction: row;
-}
-#about .col-left {
-    width: 600px;
-    height: 400px;
-    padding-left: 60px;
-}
-#about .about .col-left .about-img::after {
-    left: -45px;
-    top: 34px;
-    height: 98%;
-    width: 98%;
-    border: 10px solid #23458a;
-}
-#about .col-right {
-    text-align: left;
-    padding: 30px;
-}
-#about .col-right h1 {
-    text-align: left;
-}
-/* End About */
-/* contact  */
-#contact .contact {
-    flex-direction: column;
-    padding: 100px 0;
-    align-items: center;
-    justify-content: center;
-    min-width: 20vh;
-}
-#contact .contact-items {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin: 0;
-}
-#contact .contact-item {
-    width: 30%;
-    margin: 0;
-    flex-direction: row;
-}
-#contact .contact-item .icon {
-    height: 100px;
-    width: 100px;
-}
-#contact .contact-item .icon img {
-    object-fit: contain;
-}
-#contact .contact-item .contact-info {
-    width: 100%;
-    text-align: left;
-    padding-left: 20px;
-}
-#contact .openhours {
-    padding: 20px;
-    text-align: center;
-    font-size: 1.5em;
-}
-/* End contact  */
-/* End Media Query For Tablet */
-/* Media Query For Desktop */
-@media only screen and (min-width: 1200px) {
-    /* header */
-    #header .hamburger {
-        display: none;
-    }
-    #header .nav-list ul {
-        position: initial;
-        display: block;
-        height: auto;
-        width: fit-content;
-        background-color: transparent;
-    }
-    #header .nav-list ul li {
-        display: inline-block;
-    }
-    #header .nav-list ul li a {
-        font-size: 1.8rem;
-    }
-    #header .nav-list ul a:after {
-        display: none;
-    }
-    /* End header */
-    #services .service-bottom .service-item {
-        flex-basis: 22%;
-        margin: 1.5%;
-    }
-}
-/* End  Media Query For Desktop */
+        }
+        #header .nav-list ul li a {
+            font-size: 1.8rem;
+
+        }
+        #header .nav-list ul a:after {
+            display: none;
+
+        }
+        /* End header */
+        /* End  Media Query For Desktop */
