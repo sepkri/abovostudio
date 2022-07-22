@@ -299,8 +299,14 @@ p {
 /* End About Section */
 #references {
     color: white;
+	width: 98%;
+	margin: 0 auto;
     background-color: #001f63;
     overflow: hidden;
+	border-bottom: double white 8px;
+	border-top: double white 8px;
+	
+
 }
 #references .section-title {
     color: white;
@@ -403,7 +409,8 @@ p {
 /* covid section */
 .projects {
     flex-direction: column;
-    max-width: 100%;
+    max-width: 98%;
+	min-height: 50vh;
     margin: 0 auto;
     padding: 100px 0;
 }
@@ -418,6 +425,8 @@ p {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+
 }
 .project-item {
 	
@@ -425,15 +434,19 @@ p {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 80%;
+    width: 90%;
     margin: 20px auto;
     overflow: hidden;
-    border-radius: 10px;
+	border-bottom: double #001f63 8px;
+	border-top: double #001f63 8px;
+
+
 }
 .project-info {
     padding: 7vw;
     flex-basis: 55%;
     height: 100%;
+	min-width: 100%;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -455,7 +468,7 @@ p {
 
 
 .project-info h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 500;
 }
 .project-info h2 {
@@ -471,7 +484,7 @@ p {
     font-weight: 800;
 }
 .project-img {
-    flex-basis: 45%;
+    flex-basis: 60%;
     height: 300px;
     overflow: hidden;
     position: relative;
@@ -479,7 +492,7 @@ p {
 }
 
 .project-img img {
-    transition: 0.3s ease transform;
+    transition: 0.5s ease transform;
 }
 .project-item:hover .project-img img {
     transform: scale(1.1);
@@ -530,9 +543,6 @@ p {
 }
 
 
-.rendelo-info{
-	text-align: center;
-}
 /*End contact Section */
 /* Footer */
 #footer {
@@ -608,7 +618,7 @@ p {
         flex-direction: row-reverse;
     }
     #szolgaltatas .project-item {
-        height: 400px;
+        height: 60vh;
         margin: 0;
         width: 100%;
         border-radius: 0;
@@ -628,7 +638,7 @@ p {
         flex-direction: row-reverse;
     }
     #covid19 .project-item {
-        height: 400px;
+        height: 60vh;
         margin: 0;
         width: 100%;
         border-radius: 0;
@@ -648,7 +658,7 @@ p {
         flex-direction: row-reverse;
     }
     #penztarak .project-item {
-        height: 400px;
+        height: 60vh;
         margin: 0;
         width: 100%;
         border-radius: 0;
@@ -667,7 +677,7 @@ p {
         flex-direction: row-reverse;
     }
     #tanacs .project-item {
-        height: 400px;
+        height: 60vh;
         margin: 0;
         width: 100%;
         border-radius: 0;
@@ -688,7 +698,7 @@ p {
         flex-direction: row-reverse;
     }
     #fogtechnika .project-item {
-        height: 400px;
+        height: 60vh;
         margin: 0;
         width: 100%;
         border-radius: 0;
@@ -706,7 +716,7 @@ p {
         flex-direction: row;
     }
     #about .col-left {
-        width: 600px;
+        width: 60vh;
         height: 400px;
         padding-left: 60px;
     }
@@ -767,7 +777,7 @@ p {
     /* Media Query For Desktop */
     @media only screen and (min-width: 1200px) {
         /* header */
-        #header .hamburger {
+      /*  #header .hamburger {
             display: none;
         }
         #header .nav-list ul
@@ -780,15 +790,13 @@ p {
         }
         #header .nav-list ul li {
             display: inline-block;
-
         }
         #header .nav-list ul li a {
             font-size: 2rem;
-
         }
         #header .nav-list ul a:after {
             display: none;
-
-        }
+        }*/
 		.project-item{width: 100vw;}
+		.project-info{min-width: 10%;}
 		
