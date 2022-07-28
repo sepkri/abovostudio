@@ -13,6 +13,11 @@ a {
     text-decoration: none;
 	color: black;
 }
+
+body{
+	background-color: #E9E9E9;
+}
+
 .container {
     min-height: 98vh;
     width: 100%;
@@ -45,31 +50,13 @@ p {
 .section-title span {
     color: #001f63;
 }
-.cta {
-    display: inline-block;
-    padding: 10px 30px;
-    color: white;
-    background-color: transparent;
-    border: 2px solid #001f63;
-    font-size: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    margin-top: 30px;
-    transition: 0.3s ease;
-    transition-property: background-color, color;
-}
-.cta:hover {
-    color: white;
-    background-color: #001f63;
-}
+
 .brand h1 {
     font-size: 2.5rem;
     text-transform: uppercase;
     color: white;
 }
-.brand h1 span {
-    color: #001f63;
-}
+
 /* Header section */
 #header {
     position: fixed;
@@ -82,7 +69,7 @@ p {
 }
 #header .header {
     min-height: 8vh;
-    transition: 0.3s ease  background-color;
+    transition: 0.3s ease;
 }
 #header .nav-bar {
     display:flex;
@@ -200,7 +187,6 @@ p {
 .hero-video {
     position: absolute;
     align-items: stretch;
-    background-color: #001f63;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -229,6 +215,7 @@ p {
 }
 #hero .title {
     color: white;
+	margin-top: 70vh;
     font-size: 4vw;
 }
 /* End Hero Section */
@@ -245,14 +232,16 @@ p {
 #about .container{
 	
 	  margin: auto;
-;}
+	margin-top: 100px;
+}
 
 #about .about {
     flex-direction: column-reverse;
 	padding-left: 400px;
     text-align: center;
     max-width: 1200px;
-    padding: 50px 20px;
+    padding: 0px 20px;
+
 }
 #about .about-header {
     max-width: 1200px;
@@ -305,14 +294,8 @@ p {
     overflow: hidden;
 	border-bottom: double white 8px;
 	border-top: double white 8px;
-	
+}
 
-}
-#references .section-title {
-    color: white;
-    padding-top: 70px;
-    margin: -5vh;
-}
 .slideshow-container {
     min-height: 180px;
     max-width: 1000px;
@@ -321,8 +304,9 @@ p {
 }
 /* Make the images invisible by default */
 .Containers {
-    width: 80%;
-    margin: 10%;
+    margin: 0 auto;
+	max-width: 90%;
+	min-width: 90%;
     text-align: center;
 }
 .Containers h2 {
@@ -413,6 +397,7 @@ p {
 	min-height: 50vh;
     margin: 0 auto;
     padding: 100px 0;
+
 }
 
 
@@ -437,8 +422,15 @@ p {
     width: 90%;
     margin: 20px auto;
     overflow: hidden;
+	border-radius: 20px;
+	box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+
+/*
 	border-bottom: double #001f63 8px;
 	border-top: double #001f63 8px;
+
+*/
 
 
 }
@@ -453,6 +445,8 @@ p {
     flex-direction: column;
     background-color: #001f63;
     color: white;
+
+
 }
 
 
@@ -493,36 +487,41 @@ p {
 
 .project-img img {
     transition: 0.5s ease transform;
+	transform: scale(1.1);
+
 }
 .project-item:hover .project-img img {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 /* End covid section */
 /* contact Section */
 #contact .contact {
     flex-direction: column;
-    max-width: 1200px;
+    max-width: 98%;
+	max-height: 100%;
     margin: 0 auto;
-    width: 90%;
+	background-color: white;
+	border-radius: 20px;
 }
 #contact .contact-items {
     /* max-width: 400px; */
     width: 100%;
+	
 }
 #contact .contact-item {
-    width: 80%;
     text-align: center;
     padding: 30px;
     margin: 30px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+	
 }
 #contact .icon {
-    width: 70px;
+   min-width: 70px;
     margin: 0 auto;
     margin-bottom: 10px;
+	
 }
 #contact .contact-info h1 {
     font-size: 2.5rem;
@@ -537,9 +536,14 @@ p {
 .mapouter {
     align-items:center;
     background-color: #001f63;
-    max-height: 80%;
+    max-height: 100%;
     object-fit:contain;
-	
+}
+
+.contact-video{
+	max-width: 70%;
+		box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
 }
 
 
@@ -621,7 +625,8 @@ p {
         height: 60vh;
         margin: 0;
         width: 100%;
-        border-radius: 0;
+        border-radius: 20px;
+		
     }
     #szolgaltatas .all-projects .project-info {
         height: 100%;
@@ -641,7 +646,7 @@ p {
         height: 60vh;
         margin: 0;
         width: 100%;
-        border-radius: 0;
+        border-radius: 20px;
     }
     #covid19 .all-projects .project-info {
         height: 100%;
@@ -650,18 +655,42 @@ p {
         height: 100%;
     }
     /* End covid19 */
+	
+	 /* referensz */
+    #referensz .project-item {
+        flex-direction: row;
+    }
+    #referensz .project-item:nth-child(odd) {
+        flex-direction: row-reverse;
+    }
+    #referensz .project-item {
+        height: 60vh;
+        margin: 0;
+        width: 100%;
+        border-radius: 20px;
+    }
+    #referensz .all-projects .project-info {
+        height: 100%;
+    }
+    #referensz .all-projects .project-img {
+        height: 100%;
+    }
+    /* End covid19 */
+	
+	
+	
     /* penztarak */
     #penztarak .project-item {
         flex-direction: row;
     }
-    #penztarak .project-item:nth-child(odd) {
+    #penztarak .project-item:nth-child(even) {
         flex-direction: row-reverse;
     }
     #penztarak .project-item {
         height: 60vh;
         margin: 0;
         width: 100%;
-        border-radius: 0;
+        border-radius: 20px;
     }
     #penztarak .all-projects .project-info {
         height: 100%;
@@ -680,7 +709,7 @@ p {
         height: 60vh;
         margin: 0;
         width: 100%;
-        border-radius: 0;
+        border-radius: 20px;
     }
     #tanacs .all-projects .project-info {
         height: 100%;
@@ -701,7 +730,7 @@ p {
         height: 60vh;
         margin: 0;
         width: 100%;
-        border-radius: 0;
+        border-radius: 20px;
     }
     #fogtechnika .all-projects .project-info {
         height: 100%;
@@ -738,7 +767,7 @@ p {
     /* contact  */
     #contact .contact {
         flex-direction: column;
-        padding: 100px 0;
+        padding: 50px 0;
         align-items: center;
         justify-content: center;
         min-width: 20vh;
@@ -767,11 +796,7 @@ p {
         text-align: left;
         padding-left: 20px;
     }
-    #contact .openhours {
-        padding: 20px;
-        text-align: center;
-        font-size: 1.5em;
-    }
+    
     /* End contact  */
     /* End Media Query For Tablet */
     /* Media Query For Desktop */
@@ -797,6 +822,12 @@ p {
         #header .nav-list ul a:after {
             display: none;
         }*/
-		.project-item{width: 100vw;}
-		.project-info{min-width: 10%;}
+		.project-item{width: 100vw;
+}
+		.project-info{min-width: 10%;
+
+		
+		
+
+		}
 		
