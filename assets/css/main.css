@@ -313,7 +313,6 @@ font-family: CocoRegular;
 		-ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		color: inherit;
-		border-bottom: dotted 1px;
 		text-decoration: none;
 	}
 
@@ -1524,14 +1523,38 @@ font-family:CocoRegular;
 
 
 .referencia{
-	background-color: #f4f4f4;
+	background-color:rgba(244,244,244,0.80);
 	padding: 3%;
-	border-radius: 5px;
-	width: 80vh;
-		
-
+	color: #FBC56E;
+	border-radius: 25px;
+	width: 40vw;
+	font-size: 2em;
+	text-align:center;
+	text-align-last: center;
+	transition: ease-in-out .7s;
 }
 
+.referencia a{
+	transition: ease-in-out .7s;
+	color: black;
+	margin: 5px;
+	text-decoration:none;
+	font-family: CocoThin;
+	display: inline;
+	    white-space: nowrap;
+
+	
+}
+
+.referencia b{
+	color: #FBC56E;
+}
+.referencia a:hover{
+	background-color: #E0E0DD;
+
+	transition: ease-in-out .7s;
+	border-radius: 100px;
+}
 
 			.gallery .modal.loaded:before {
 				-moz-transition-delay: 0s;
