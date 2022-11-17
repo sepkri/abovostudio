@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300i,400i");
 @font-face{
 	font-family:CocoThin;
-	src: url("../webfonts/Zetafonts - CocogoosePro-Thin.otf");
+	src: url("../../FuturaLTProLight.otf");
 }
 
 @font-face{
@@ -841,6 +841,12 @@ font-family:CocoRegular;
 		opacity: 1.0;
 	}
 
+
+
+
+
+
+
 /* Icon */
 
 	.icon {
@@ -1528,7 +1534,7 @@ font-family:CocoRegular;
 	color: #FBC56E;
 	border-radius: 25px;
 	width: 40vw;
-	font-size: 2em;
+	font-size: 1.6em;
 	text-align:center;
 	text-align-last: center;
 	transition: ease-in-out .7s;
